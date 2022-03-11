@@ -11,7 +11,7 @@ i=1 # set starting number for the first file
 
 for file in *.consensus.fasta; do  
   f=$((i++))                                # set f variable increasing by 1 from i variable
-  mv "$file" "$(printf "0"$f-"${file}")"    # rename file with a leading 0 to original file name
+  mv "${file}" "$(printf "0"${f}-"${file}")"    # rename file with a leading 0 to original file name
 done
 
 #=============================#
