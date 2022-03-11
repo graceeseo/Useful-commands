@@ -1,0 +1,46 @@
+#===============================================================================================#
+### March 10, 2022
+#------------------------------------------------#
+### combine multiple fasta files into one file --- useful for nextclade etc.
+#===============================================================================================#
+
+cd PATH/TO/FILE # change directory
+
+for file in *.consensus.fasta ; do
+    echo ${file}
+    cat ${file} >> all_consensus.fasta
+done
+
+#------------------------------------------------#
+### list of files
+#------------------------------------------------#
+test1.consensus.fasta
+test2.consensus.fasta
+test3.consensus.fasta
+
+#------------------------------------------------#
+### Outcome
+#------------------------------------------------#
+
+test1.consensus.fasta
+test2.consensus.fasta
+test3.consensus.fasta
+all_consensus.fasta
+  >test1
+  ACGCACACACACAC
+  GATCACATACAGAA
+  >test2
+  AGATCAACCCATAT
+  GGATAAAAAGAGAG
+  >test3
+  ATTTGGTGTATATA
+  TTTATTAGAACACC
+  
+  
+  
+#===============================================================================================#
+### Date
+#------------------------------------------------#
+### 
+#===============================================================================================#
+
