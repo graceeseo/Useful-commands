@@ -1,0 +1,46 @@
+#============================================================#
+### March 10, 2022
+#============================================================#
+### Rename files in a folder
+### Add number in front of the file with a leading 0
+#============================================================#
+
+cd PATH/TO/FILE # change directory
+
+i=1 # set starting number for the first file
+
+for file in *.consensus.fasta; do  
+  f=$((i++))                                # set f variable increasing by 1 from i variable
+  mv "$file" "$(printf "0"$f-"${file}")"    # rename file with a leading 0 to original file name
+done
+
+#=============================#
+### Original file name in folder
+#=============================#
+
+test1.consensus.fasta
+test2.consensus.fasta
+test3.consensus.fasta
+test4.consensus.fasta
+test5.consensus.fasta
+
+#=============================#
+### New file name
+#=============================#
+
+01-test1.consensus.fasta
+02-test2.consensus.fasta
+03-test3.consensus.fasta
+04-test4.consensus.fasta
+05-test5.consensus.fasta
+
+#============================================================#
+
+
+
+
+
+
+
+
+
