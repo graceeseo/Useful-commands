@@ -1,0 +1,17 @@
+cat input.txt
+# file1.sh 2001 new
+# file2.sh 2002 old
+# file3.sh 2003 old 
+# file4.sh 2004 new
+
+
+### Convert .txt output into .csv for R Studio or other types of data analysis
+
+sed 's/ \+/,/g' input.txt > output.csv
+
+cat output.csv
+# file1.sh,2001,new
+# file2.sh,2002,old
+# file3.sh,2003,old 
+# file4.sh,2004,new
+
