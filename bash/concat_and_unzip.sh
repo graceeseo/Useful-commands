@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ### Concatenating MinION multiple fastq.gz files into one file and gzip
 
 ### specify directory variables
