@@ -1,0 +1,27 @@
+### Count total number of unique files in the list
+### list_fast5_pass.txt is a tab delimited file with the following content
+
+head -n 10 list_fast5_pass.txt 
+FAR83979_pass_barcode89_0beb210f_0.fast5
+FAR83979_pass_barcode49_0beb210f_0.fast5
+FAR83979_pass_barcode83_0beb210f_0.fast5
+FAR83979_pass_barcode07_0beb210f_0.fast5
+FAR83979_pass_barcode24_0beb210f_0.fast5
+FAR83979_pass_barcode57_0beb210f_0.fast5
+FAR83979_pass_barcode10_0beb210f_0.fast5
+FAR83979_pass_barcode03_0beb210f_0.fast5
+FAR83979_pass_barcode58_0beb210f_0.fast5
+FAR83979_pass_barcode42_0beb210f_0.fast5
+
+### The goal is to find how many of files in this list (~500,000+ files) are unique
+### 1. Tab delimited file, so add 4 spaces in ' ' 
+### 2. If your list is in the first column, use print $1 or $2 for second column and so on. 
+### 3. Specify your list file name (list_fast5_pass.txt)
+### 4. Sort and only print unique file names
+### 5. Instead of printing, count the list. If wc -l is not added, unique file names will be printed in console.
+
+
+awk -F '    ' '{print $1}' list_fast5_pass.txt | sort | uniq -c | wc -l
+
+
+### output: 10
