@@ -1,0 +1,37 @@
+### Add a word to fasta header at the end
+
+### adding _illumina
+sed 's/>.*/&_illumina/' test.fasta > result.fasta
+
+
+
+
+### test file
+>ran_1
+asdwsdfsdfsefs
+asdsefsdgfsgeg
+awdsefsegsdgsd
+
+>ran_2
+sdfsefsdfsefsf
+sefsefefsefsef
+
+>test-5
+sefsdfesfdfesf
+sefsefsefsefse
+
+###========###
+### result 
+>ran_1_illumina
+asdwsdfsdfsefs
+asdsefsdgfsgeg
+awdsefsegsdgsd
+
+>ran_2_illumina
+sdfsefsdfsefsf
+sefsefefsefsef
+
+>test-5_illumina
+sefsdfesfdfesf
+sefsefsefsefse
+
