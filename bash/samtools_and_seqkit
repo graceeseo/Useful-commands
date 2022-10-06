@@ -1,0 +1,19 @@
+### convert samtools to bam files
+
+conda activate samtools
+
+for f in ./* ;
+do 
+    filename=`basename "${f%.*}"` ; ### remove file extension ${f} = mapped.ref.sam, ${f%.*} = mapped.ref, ${f%.*.*} = mapped
+    echo "processing ${filename}"
+    samtools sort ${filename}.sam -o ${filename}.bam ; ### use srun on the cluster
+    samtools index ${filename}.bam ${filename}.bam.bai ; 
+done
+
+
+
+### Create bam index files for those only bam is present.
+
+for i in *.bam ; do echo "Indexing: "$i ; samtools index $i $i".bai" ; done
+
+
