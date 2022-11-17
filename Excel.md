@@ -4,8 +4,7 @@ Reference: https://www.ablebits.com/office-addins-blog/nested-if-excel-multiple-
 ```
 Excel file example:
 
-<b> 
-Columns:  A           B           C         D         E           F* <b>
+**Columns:  A           B           C         D         E           F **
 Row1:     Test1       Test2       Test3     Test4     Status      Explanation
 Row2:     Negative    Fix         Fix       Fix       Negative    Not infected
 Row3:     Fix         Vaccinated  Fix       Fix       Vaccinated  Not infected + vaccinated
