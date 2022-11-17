@@ -4,8 +4,11 @@
 
 # Mounting drives on personal PC using WSL
 go to: /mnt/ (Windows 10)
+
 `mkdir -p FOLDER`
+
 Mount drive 
+
 `sudo mount -t drvfs '\\NETWORK_ADDRESS\FOLDER' /mnt/FOLDER`
 
 
@@ -31,13 +34,17 @@ file4.sh,2004,new
 
 # Install conda package
 If conda package is available on Anaconda, you can install it on the cluster
+
 i.e. https://anaconda.org/bioconda/bowtie2
+
 `sbatch -c 4 --mem=32G -p PARTITION --job-name conda --wrap="conda create -y -p /Drives/FOLDER/FOLDER2/conda/bowtie2-2.4.5 bowtie2==2.4.5"`
 
 i.e. https://anaconda.org/bioconda/vcftools
+
 `sbatch -c 4 --mem=32G -p PARTITION --job-name conda --wrap="conda create -y -p /Drives/FOLDER/FOLDER2/conda/vcftools-0.1.16 vcftools==0.1.16"`
 
 i.e. https://anaconda.org/bioconda/bwa-mem2
+
 `sbatch -c 4 --mem=32G -p PARTITION --job-name conda --wrap="conda create -y -p /Drives/FOLDER/FOLDER2/conda/bwa-mem2-2.2.1 bwa-mem2==2.2.1"`
 
 
